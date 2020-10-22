@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Réservation voyage </title>
+    </head>
+
+    <body>
+        <h1><strong>Réservation du voyage: </strong></h1>
+        <section>
+            <h3>Mes informations personnelles:</h3>
+            <p>Prénom*:</p>
+            <input id="prénom" type="text" value="Prénom">
+            <p>nom*:</p>
+            <input id="nom" type="text" value="nom">
+            <p>mon adresse email*:</p>
+            <input id="email" type="text" value="mon email">
+            <p>mon numéro de téléphone:</p>
+            <input id="télépĥone" type="number" value="">
+        </section>
+        <section>
+            <h3>Les informations du voyage:</h3>
+            <p>Date de départ*:</p>
+            <input id="jourd" type="number" value="">
+            /
+            <input id="moid" type="number" value="">
+            /
+            <input type="number" value="">
+            <p>Date de retour*:</p>
+            <input id="jourr" type="number" value="">
+            /
+            <input id="moir" type="number" value="">
+            /
+            <input type="number" value="">
+            <p>Nombre d'adultes*:</p>
+            <input id="adultes" type="number" value="">
+            <p>Nombre d'enfants (-12 ans)*:</p>
+            <input id="enfants" type="number" value="">
+            <p>Petit-déjeuner:</p>
+            <input type="checkbox" id="subscribedéj" name="oui">
+            <label for="subscribedéj"> Oui </label>
+            <input type="checkbox" id="unsubscribedéj" name="non">
+            <label for="unsubscribedéj"> Non </label>
+        </section>
+        <section>
+            <h2>Demande de renseignements:</h2>
+            <form>
+                <div>
+                    <input type="text" id="renseignement-txt" name="renseignement">
+                </div>
+                <div>
+                    <button type="submit">Envoyer ma demande</button>
+                </div>
+            </form>
+            <form name="form-prix" onchange="CalcPrix()">
+            
+
+
+            </form>
+        </section>
+    </body>
+</html>

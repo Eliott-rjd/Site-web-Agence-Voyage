@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil travel.fr</title>
+        
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../JS/JavaPourTous.js"></script>
+        
+    </head>
+
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <h1><strong>Accueil travel.fr</strong></h1>
+        <nav>
+            <div class="colonne">
+                <!--
+                <input type="text" placeholder="Recherche"> 
+                <button type="submit"> <img src="../Image/loupe.png" alt="Recherche"> <i class="fa fa-search"></i></button>
+                    
+                Bouton de recheche pas indispensable pour le moment (rechercher un voyage
+                fais appraitre une page avec les voyage contenant le mo clé rechecher
+                !--> 
+                <a href="Accueil.html" class="active">Menu</a>
+                <a href="Panier.html" class="active">Panier</a>
+                </div>
+                <div class="colonne">
+                <a href="Contact.html" class="active">Contact & A propos</a>
+                <a href="Authentification.html" class="active">Connexion</a>
+                </div>
+        </nav>
+        <section class="Filtre">
+            <h2>Filtre</h2>
+            <p>prix min<br>
+            prix max<br>
+            période de disponibilité</p>
+            <section class="animaux acceptés">
+                <h4>animaux acceptés</h4>
+                <p>oui<br>
+                non</p>
+            </section>
+            <section class="petit déj">
+                <h4>petit déjeuner proposé</h4>
+                <p>oui<br>
+                non</p>
+            </section>
+            <section class="handicap">
+                <h4>handicap</h4>
+                <p>oui<br>
+                non</p>
+            </section>
+            <section class="continents">
+                <h4>continents</h4>
+                <p>Europe<br>
+                Amérique<br>
+                Océanie<br>
+                Asie<br>
+                Afrique</p>
+            </section>
+        </section>
+
+        <p id="Destination"></p>
+        <div class="liens">
+            <template id="ListeVoyage">
+                <span>
+                    <img src={{destination}} alt={{nom}}>
+                    <a href={{lien}} > </a>
+                 
+                </span>
+            </template> 
+        </div>
+        <footer>
+            <br>
+            <a href="CGV.html"> CGV </a> 
+            <a href="MentionsLégales.html"> Mentions Légales </a> 
+            <p>Vous avez des questions? Contactez nous ici:</p>
+            <a href="Contact.html"> Contact et à propos </a> 
+        </footer>
+        <script src="../JS/ImageVoyage.js"></script>
+    </body>
+    
+    
+</html>

@@ -1,0 +1,73 @@
+
+body {
+  margin: 10;
+  font-family: "Arial";
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: darkblue;
+}
+
+.colonne {
+  height: 40px;
+  padding-top: 20px;
+  
+}
+.colonne:last-child {
+  text-align: right;
+}
+
+nav:after {
+  content: ""  ;
+  display: table;
+  clear: both;
+}
+nav a {
+   background-color:  black; 
+   color: white;
+   
+    padding: 14px   16px;
+    text-decoration: none;
+ }
+
+nav a:hover {
+  background-color: cyan;
+}
+.active {
+  background-color: darkblue;
+}
+
+
+
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:gray;
+  color: black;
+  text-align: center;
+}
+
