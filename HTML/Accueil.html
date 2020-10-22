@@ -49,14 +49,26 @@
                 <p>oui<br>
                 non</p>
             </section>
-            <section class="continents">
-                <h4>continents</h4>
-                <p>Europe<br>
-                Amérique<br>
-                Océanie<br>
-                Asie<br>
-                Afrique</p>
-            </section>
+            <div id="continents">
+                <button class="active" onclick="filterSelection('all')"> Tous les continents</button>
+                <button class="BoutonFiltre" onclick="filterSelection('Europe')"> Europe</button>
+                <button class="BoutonFiltre" onclick="filterSelection('Amérique')"> Amérique</button>
+                <button class="BoutonFiltre" onclick="filterSelection('Océanie')"> Océanie</button>
+                <button class="BoutonFiltre" onclick="filterSelection('Asie')"> Asie</button>
+                <button class="BoutonFiltre" onclick="filterSelection('Afrqiue')"> Afrique</button>
+            </div>
+            <div class='container'>
+                <div class="filterDiv Europe">Venise</div>
+                <div class="filterDiv Europe">Athènes</div>
+                <div class="filterDiv Amérique">LasVegas</div>
+                <div class="filterDiv Amérique">NewYork</div>
+                <div class="filterDiv Amérique">Hawaii</div>
+                <div class="filterDiv Asie">Tokyo</div>
+                <div class="filterDiv Asie">Hong-Kong</div>
+                <div class="filterDiv Afrique">Johannesburg</div>
+                <div class="filterDiv Afrique">Marrakech</div>
+                <div class="filterDiv Océanie">Sydney</div>
+            </div>
         </section>
 
         <p id="Destination"></p>

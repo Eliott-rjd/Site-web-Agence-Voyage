@@ -6,17 +6,19 @@ class ListeVoyage {
     }
 }
 
-let Voyage1=new ListeVoyage('Italie','../Image/Europe/Italie1.jpeg' ,'PageInfosItalie.html');
-let Voyage2=new ListeVoyage('Grèce','../Image/Europe/Grèce1.jpeg' ,'PageInfosGrèce.html');
-var Voyage3=new ListeVoyage('Chine','../Image/Asie/Chine1.jpeg' ,'PageInfosChine.html');
-var Voyage4=new ListeVoyage('Japon','../Image/Asie/Japon1.jpeg' ,'PageInfosJapon.html');
-var Voyage5=new ListeVoyage('Australie','../Image/Océanie/Australie1.jpeg' ,'PageInfosAustralie.html');
-var Voyage6=new ListeVoyage('AfriqueDuSud','../Image/Afrique/AfriqueDuSud1.jpeg' ,'PageInfosAfriqueDuSud.html');
-var Voyage7=new ListeVoyage('Maroc','../Image/Afrique/Maroc1.jpeg','PageInfosMaroc.html');
-var Voyage8=new ListeVoyage('Hawaii','../Image/Amérique/Hawaii1.jpeg' ,'PageInfosHawaii.html');
-var Voyage9=new ListeVoyage('Etats-Unis','../Image/Amérique/Etats-Unis1.jpeg' ,'PageInfosEtats-Unis.html');
+let Voyage1=new ListeVoyage('Venise','../Image/Europe/Venise.jpeg' ,'PageInfosVenise.html');
+let Voyage2=new ListeVoyage('Athènes','../Image/Europe/Athènes.jpeg' ,'PageInfosAthènes.html');
+var Voyage3=new ListeVoyage('Hong-Kong','../Image/Asie/Hong-Kong.jpeg' ,'PageInfosHong-Kong.html');
+var Voyage4=new ListeVoyage('Tokyo','../Image/Asie/Tokyo.jpeg' ,'PageInfosTokyo.html');
+var Voyage5=new ListeVoyage('Sydney','../Image/Océanie/Sydney.jpeg' ,'PageInfosSydney.html');
+var Voyage6=new ListeVoyage('Johannesbyrg','../Image/Afrique/Johannesburg.jpeg' ,'PageInfosJohannesburg.html');
+var Voyage7=new ListeVoyage('Marrakech','../Image/Afrique/Marrakech.jpeg','PageInfosMarrakech.html');
+var Voyage8=new ListeVoyage('Hawaii','../Image/Amérique/Hawaii.jpeg' ,'PageInfosHawaii.html');
+var Voyage9=new ListeVoyage('NewYork','../Image/Amérique/NewYork.jpeg' ,'PageInfosNewYork.html');
+var Voyage10=new ListeVoyage('LasVegas','../Image/Amérique/LasVegas.jpeg' ,'PageInfosLasVegas.html');
 
-const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Voyage8,Voyage9];
+
+const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Voyage8,Voyage9,Voyage10];
 
 
 
