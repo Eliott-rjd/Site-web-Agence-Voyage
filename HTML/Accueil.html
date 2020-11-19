@@ -6,7 +6,7 @@
         
         <link rel="stylesheet" href="../CSS/style.css">
         <script src="../JS/JavaPourTous.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -30,7 +30,7 @@
                 </div>
         </nav>
         <!-- Side navigation -->
-        <div id="mySidenav" class=sidenav>
+        <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <section class="Filtre">
                 <h2>Filtre</h2>
@@ -74,19 +74,20 @@
                 </div>
             </section>
         </div>
-        <span onclick="openNav()"><img src=..Image/MenuLateral.jpg alt=Filtre></span>
-
-        <div class="principale">
-
+        <div class="btnBarreLateral">
+            <span onclick="openNav()"><img src=../Image/MenuLateral.jpg  alt=Filtre></span>
+        </div>
+        <div class="principale"> 
             <p id="Destination"></p>
             <div class="liens">
                 <template id="ListeVoyage">
-                    <span>
-                        <img src={{ville}} alt={{nom}}>
-                        <a href={{lien}} > s</a>
-                    
+                    <span class=AfficheDynamique>
+                        <a  href={{lien}} ><img src={{ville}} alt={{nom}}></a>
+                        <div class="Température"><button onclick="Température()">O</button>
+                            <p id="myp"></p></div>
                     </span>
                 </template> 
+            </div>
         </div>
         <footer>
             <br>
@@ -97,6 +98,4 @@
         </footer>
         <script src="../JS/ImageVoyage.js"></script>
     </body>
-    
-    
 </html>
