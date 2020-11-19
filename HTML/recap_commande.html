@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr"> 
     <head>
+        <meta charset="UTF-8">
+        <title>Récapitulatif commande </title>
         <link rel="stylesheet" href="../CSS/style.css">
         <script src="../JS/JavaPourTous.js"></script>     
         <script src="../JS/Réservation.js" ></script>
-        <meta charset="UTF-8">
-        <title>Récapitulatif commande </title>
     </head>
 
     <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <h1><strong>Récapitulatif de votre commande: </strong></h1>
+        <nav>
+            <div class="colonne">
+                <!--
+                <input type="text" placeholder="Recherche"> 
+                <button type="submit"> <img src="../Image/loupe.png" alt="Recherche"> <i class="fa fa-search"></i></button>
+                    
+                Bouton de recheche pas indispensable pour le moment (rechercher un voyage
+                fais appraitre une page avec les voyage contenant le mo clé rechecher
+                !--> 
+                <a href="Accueil.html" class="active">Menu</a>
+                <a href="Panier.html" class="active">Panier</a>
+                </div>
+                <div class="colonne">
+                <a href="Contact.html" class="active">Contact & A propos</a>
+                <a href="Authentification.html" class="active">Connexion</a>
+                </div>
+        </nav>
         <form name="form-valid" action="Panier.html" method = "get">
             <h3>Mes informations personnelles:</h3>
             <p>Prénom:</p>
@@ -54,4 +72,12 @@
         <form name="form-modif" action="Réservation.html" method = "get">
             <button type="submit">Modifier</button>
         </form>
+        <footer>
+            <br>
+            <a href="CGV.html"> CGV </a> 
+            <a href="MentionsLégales.html"> Mentions Légales </a> 
+            <p>Vous avez des questions? Contactez nous ici:</p>
+            <a href="Contact.html"> Contact et à propos </a> 
+        </footer>
     </body>
+</html>

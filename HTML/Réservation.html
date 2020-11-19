@@ -2,61 +2,92 @@
 <html lang="fr"> 
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../JS/JavaPourTous.js"></script>
+        <script src="../JS/Réservation.js" ></script>  
         <title>Réservation voyage </title>
     </head>
 
     <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <h1><strong>Réservation du voyage: </strong></h1>
-        <section>
-            <h3>Mes informations personnelles:</h3>
-            <p>Prénom*:</p>
-            <input id="prénom" type="text" value="Prénom">
-            <p>nom*:</p>
-            <input id="nom" type="text" value="nom">
-            <p>mon adresse email*:</p>
-            <input id="email" type="text" value="mon email">
-            <p>mon numéro de téléphone:</p>
-            <input id="télépĥone" type="number" value="">
-        </section>
-        <section>
-            <h3>Les informations du voyage:</h3>
-            <p>Date de départ*:</p>
-            <input id="jourd" type="number" value="">
-            /
-            <input id="moid" type="number" value="">
-            /
-            <input type="number" value="">
-            <p>Date de retour*:</p>
-            <input id="jourr" type="number" value="">
-            /
-            <input id="moir" type="number" value="">
-            /
-            <input type="number" value="">
-            <p>Nombre d'adultes*:</p>
-            <input id="adultes" type="number" value="">
-            <p>Nombre d'enfants (-12 ans)*:</p>
-            <input id="enfants" type="number" value="">
-            <p>Petit-déjeuner:</p>
-            <input type="checkbox" id="subscribedéj" name="oui">
-            <label for="subscribedéj"> Oui </label>
-            <input type="checkbox" id="unsubscribedéj" name="non">
-            <label for="unsubscribedéj"> Non </label>
-        </section>
+        <nav>
+            <div class="colonne">
+                <a href="Accueil.html" class="active">Menu</a>
+                <a href="Panier.html" class="active">Panier</a>
+                </div>
+                <div class="colonne">
+                <a href="Contact.html" class="active">Contact & A propos</a>
+                <a href="Authentification.html" class="active">Connexion</a>
+                </div>
+        </nav>
+        <form name="form-prix" onchange="CalcPrix()" action="recap_commande.html" method = "get">
+            <section>
+                <h3>Mes informations personnelles:</h3>
+                <p>Prénom*:</p>
+                <input id="prénom" type="text" value="Prénom">
+                <p>nom*:</p>
+                <input id="nom" type="text" value="nom">
+                <p>mon adresse email*:</p>
+                <input id="email" type="email" value="mon email">
+                <p>mon numéro de téléphone:</p>
+                <input id="télépĥone" type="number" value="">
+            </section>
+            <section>
+                <h3>Les informations du voyage:</h3>
+                
+                <p>Date de départ*:</p>
+                <input id="jourd" type="number" value="">
+                /
+                <input id="moisd" type="number" value="">
+                /
+                <input id="annéed" type="number" value="">
+
+                <p>Date de retour*:</p>
+                <input id="jourr" type="number" value="">
+                /
+                <input id="moisr" type="number" value="">
+                /
+                <input id="annéer" type="number" value="">
+                <p>Nombre d'adultes*:</p>
+                <input id="adultes" type="number" value="">
+                <p>Nombre d'enfants (-12 ans)*:</p>
+                <input id="enfants" type="number" value="">
+                <p>Petit-déjeuner:</p>
+                <input type="checkbox" id="subscribedéj" name="oui">
+                <label for="subscribedéj"> Prendre un petit-déjeuner </label>
+            </section>
+            <p>Prix total:</p>
+            <p id= "résultat"></p>
+            <div>
+                <button type="submit">Valider</button>
+            </div> 
+        </form>
+        <form name="form-remise_à_zéro" action="Réservation.html" method = "get">
+            <button type="submit">Remise à zéro</button>
+        </form>
         <section>
             <h2>Demande de renseignements:</h2>
-            <form>
+            <form name="form-renseignement" action= "mailto:axel.guillet6@gmail.com?subject=Renseignement?body=renseignement" method = "post">
+                <label for="nom2">Nom :</label>
+                <input id="nom2" type="text" value="nom">
+                <label for="email2">e-mail :</label>
+                <input id="email2" type="email" value="mon email">
                 <div>
-                    <input type="text" id="renseignement-txt" name="renseignement">
+                    <label for="renseignement">Message :</label>
+                    <textarea id="renseignement" name="renseignement"></textarea>
                 </div>
                 <div>
                     <button type="submit">Envoyer ma demande</button>
                 </div>
-            </form>
-            <form name="form-prix" onchange="CalcPrix()">
-            
-
-
-            </form>
+            </form>  
         </section>
+        <footer>
+            <br>
+            <a href="CGV.html"> CGV </a> 
+            <a href="MentionsLégales.html"> Mentions Légales </a> 
+            <p>Vous avez des questions? Contactez nous ici:</p>
+            <a href="Contact.html"> Contact et à propos </a> 
+        </footer>
     </body>
 </html>

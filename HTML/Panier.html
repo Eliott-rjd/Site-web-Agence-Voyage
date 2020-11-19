@@ -10,13 +10,6 @@
     <body>
         <nav>
             <div class="colonne">
-                <!--
-                <input type="text" placeholder="Recherche"> 
-                <button type="submit"> <img src="../Image/loupe.png" alt="Recherche"> <i class="fa fa-search"></i></button>
-                    
-                Bouton de recheche pas indispensable pour le moment (rechercher un voyage
-                fais appraitre une page avec les voyage contenant le mo clé rechecher
-                !--> 
                 <a href="Accueil.html" class="active">Menu</a>
                 <a href="Panier.html" class="active">Panier</a>
                 </div>
@@ -31,7 +24,18 @@
         </a> <br><br>
         <fieldset>
            <div> Récapitulatif: </div> 
-           <div> le recap</div>
+           <div> le recap:</div>
+           <p>Nombre d'adultes:</p>
+           <p id="adultes_recap"></p>
+           <p>Nombre d'enfants:</p>
+           <p id="enfants_recap"></p>
+           <p>Prix total:</p>
+           <p id= "résultat"></p>
+           <p>Numéro de réservation:</p>
+           <p id="num_réservation"></p>
+            <form name="form-modif-commande" action="Réservation.html" method = "get">
+                <button type="submit">Modification de la commande</button>
+            </form>
         </fieldset>
         <footer>
             <br>
@@ -42,3 +46,4 @@
         </footer>
 
     </body>
+</html>
