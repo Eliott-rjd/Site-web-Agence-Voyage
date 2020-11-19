@@ -1,14 +1,16 @@
 
 var mybutton;
-var MesContinents;
 var Select;
+var current
+var btnContainer
+var btnsFiltre
 var current
 
 window.onload = function () {
   mybutton = document.getElementById('myBtn')
-  MesContinents = document.getElementById('continents');
-  Select = MesContinents.getElementsByClassName('BoutonFiltre');
-  current = document.getElementsByClassName('active');
+  btnContainer = document.getElementById("continents");
+  btnsFiltre = btnContainer.getElementsByClassName("BoutonFiltre");
+  current = document.getElementsByClassName("active");
 }
 
 
@@ -33,23 +35,26 @@ function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
   if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i],"show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i],"show");
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
-  
-
 }
 
+// Afficher les élements filtré
 function w3AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
   }
 }
 
+// Cacher les élements non selec
 function w3RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -62,9 +67,20 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-for (var i = 0; i < Select.length; i++) {
-  Select[i].addEventListener("click", function () {
+for (var i = 0; i < btnsFiltre.length; i++) {
+  btnsFiltre[i].addEventListener("click", function() {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }

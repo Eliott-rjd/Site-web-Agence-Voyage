@@ -29,57 +29,64 @@
                 <a href="Authentification.html" class="active">Connexion</a>
                 </div>
         </nav>
-        <section class="Filtre">
-            <h2>Filtre</h2>
-            <p>prix min<br>
-            prix max<br>
-            période de disponibilité</p>
-            <section class="animaux acceptés">
-                <h4>animaux acceptés</h4>
-                <p>oui<br>
-                non</p>
+        <!-- Side navigation -->
+        <div id="mySidenav" class=sidenav>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <section class="Filtre">
+                <h2>Filtre</h2>
+                <p>prix min<br>
+                prix max<br>
+                période de disponibilité</p>
+                <section class="animaux acceptés">
+                    <h4>animaux acceptés</h4>
+                    <p>oui<br>
+                    non</p>
+                </section>
+                <section class="petit déj">
+                    <h4>petit déjeuner proposé</h4>
+                    <p>oui<br>
+                    non</p>
+                </section>
+                <section class="handicap">
+                    <h4>handicap</h4>
+                    <p>oui<br>
+                    non</p>
+                </section>
+                <div id="continents">
+                    <button class="BoutonFiltre active" onclick="filterSelection('all')"> Tous les continents</button>
+                    <button class="BoutonFiltre" onclick="filterSelection('Europe')"> Europe</button>
+                    <button class="BoutonFiltre" onclick="filterSelection('Amérique')"> Amérique</button>
+                    <button class="BoutonFiltre" onclick="filterSelection('Océanie')"> Océanie</button>
+                    <button class="BoutonFiltre" onclick="filterSelection('Asie')"> Asie</button>
+                    <button class="BoutonFiltre" onclick="filterSelection('Afrique')"> Afrique</button>
+                </div>
+                <div class='container'>
+                    <div class="filterDiv Europe">Venise</div>
+                    <div class="filterDiv Europe">Athènes</div>
+                    <div class="filterDiv Amérique">LasVegas</div>
+                    <div class="filterDiv Amérique">NewYork</div>
+                    <div class="filterDiv Amérique">Hawaii</div>
+                    <div class="filterDiv Asie">Tokyo</div>
+                    <div class="filterDiv Asie">Hong-Kong</div>
+                    <div class="filterDiv Afrique">Johannesburg</div>
+                    <div class="filterDiv Afrique">Marrakech</div>
+                    <div class="filterDiv Océanie">Sydney</div>
+                </div>
             </section>
-            <section class="petit déj">
-                <h4>petit déjeuner proposé</h4>
-                <p>oui<br>
-                non</p>
-            </section>
-            <section class="handicap">
-                <h4>handicap</h4>
-                <p>oui<br>
-                non</p>
-            </section>
-            <div id="continents">
-                <button class="active" onclick="filterSelection('all')"> Tous les continents</button>
-                <button class="BoutonFiltre" onclick="filterSelection('Europe')"> Europe</button>
-                <button class="BoutonFiltre" onclick="filterSelection('Amérique')"> Amérique</button>
-                <button class="BoutonFiltre" onclick="filterSelection('Océanie')"> Océanie</button>
-                <button class="BoutonFiltre" onclick="filterSelection('Asie')"> Asie</button>
-                <button class="BoutonFiltre" onclick="filterSelection('Afrqiue')"> Afrique</button>
-            </div>
-            <div class='container'>
-                <div class="filterDiv Europe">Venise</div>
-                <div class="filterDiv Europe">Athènes</div>
-                <div class="filterDiv Amérique">LasVegas</div>
-                <div class="filterDiv Amérique">NewYork</div>
-                <div class="filterDiv Amérique">Hawaii</div>
-                <div class="filterDiv Asie">Tokyo</div>
-                <div class="filterDiv Asie">Hong-Kong</div>
-                <div class="filterDiv Afrique">Johannesburg</div>
-                <div class="filterDiv Afrique">Marrakech</div>
-                <div class="filterDiv Océanie">Sydney</div>
-            </div>
-        </section>
+        </div>
+        <span onclick="openNav()">open</span>
+        
+        <div class="principale">
 
-        <p id="Destination"></p>
-        <div class="liens">
-            <template id="ListeVoyage">
-                <span>
-                    <img src={{ville}} alt={{nom}}>
-                    <a href={{lien}} > s</a>
-                 
-                </span>
-            </template> 
+            <p id="Destination"></p>
+            <div class="liens">
+                <template id="ListeVoyage">
+                    <span>
+                        <img src={{ville}} alt={{nom}}>
+                        <a href={{lien}} > s</a>
+                    
+                    </span>
+                </template> 
         </div>
         <footer>
             <br>
