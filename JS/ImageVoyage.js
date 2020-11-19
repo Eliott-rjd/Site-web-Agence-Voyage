@@ -1,6 +1,6 @@
 class ListeVoyage {
-    constructor(nom,destination,lien) {
-        this._destination=destination; 
+    constructor(nom,ville,lien) {
+        this._ville=ville; 
         this._lien=lien;
         this._nom=nom;
     }
@@ -28,7 +28,7 @@ let template = document.querySelector("#ListeVoyage")
      let clone=document.importNode(template.content, true);
      newContent = clone.firstElementChild.innerHTML
         .replace(/{{nom}}/g, v._nom)
-        .replace(/{{destination}}/g, v._destination)
+        .replace(/{{ville}}/g, v._ville)
         .replace(/{{lien}}/g, v._lien);
     clone.firstElementChild.innerHTML = newContent;
     document.getElementById("Destination").appendChild(clone)
