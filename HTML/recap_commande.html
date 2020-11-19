@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+    <head>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../JS/JavaPourTous.js"></script>     
+        <script src="../JS/Réservation.js" ></script>
+        <meta charset="UTF-8">
+        <title>Récapitulatif commande </title>
+    </head>
+
+    <body>
+        <h1><strong>Récapitulatif de votre commande: </strong></h1>
+        <form name="form-valid" action="Panier.html" method = "get">
+            <h3>Mes informations personnelles:</h3>
+            <p>Prénom:</p>
+            <p id="prénom_recap"></p>
+            <p>nom:</p>
+            <p id="nom_recap"></p>
+            <p>mon adresse email:</p>
+            <p id="email_recap"></p>
+            <p>mon numéro de téléphone:</p>
+            <p id="téléphone_recap"></p>
+        
+
+        
+            <h3>Les informations du voyage:</h3>
+            
+            <p>Date de départ:</p>
+            <p id="jourd_recap"></p>
+            /
+            <p id="moisd_recap"></p>
+            /
+            <p id="annéed_recap"></p>
+
+            <p>Date de retour:</p>
+            <p id="jourr_recap"></p>
+            /
+            <p id="moisr_recap"></p>
+            /
+            <p id="annéer_recap"></p>
+            <p>Nombre d'adultes:</p>
+            <p id="adultes_recap"></p>
+            <p>Nombre d'enfants (-12 ans)*:</p>
+            <p id="enfants_recap"></p>
+            <p>Petit-déjeuner:</p>
+            <p id="subscribedéj_recap"></p>
+            <p>Numéro de réservation:</p>
+            <p id="num_réservation"></p>
+            <p>Prix total:</p>
+            <p id= "résultat"></p>
+
+            <button type="submit">Valider</button>
+        </form>
+        <form name="form-modif" action="Réservation.html" method = "get">
+            <button type="submit">Modifier</button>
+        </form>
+    </body>
