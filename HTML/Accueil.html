@@ -82,9 +82,9 @@
             <div class="liens">
                 <template id="ListeVoyage">
                     <span class=AfficheDynamique>
-                        <a  href={{lien}} ><img src={{ville}} alt={{nom}}></a>
+                        <a  href="PageInfos.html?id={{id}}" id="{{id}}" ><img src={{ville}} alt={{nom}}></a>
                         <div class="Température"><button onclick="Température()">O</button>
-                            <p id="myp"></p></div>
+                            <p id="myp">{{temperature}}</p></div>
                     </span>
                 </template> 
             </div>
