@@ -52,3 +52,4 @@ let template = document.querySelector("#ListeVoyage")
       }
     
  }
+ let page_id = new URLSearchParams(window.location.search).get("id")
