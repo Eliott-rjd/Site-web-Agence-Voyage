@@ -29,7 +29,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
+//Pris sur Howto
 filterSelection("all")
 function filterSelection(c) {
   var x, i;

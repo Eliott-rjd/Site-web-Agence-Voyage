@@ -24,32 +24,30 @@ const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Vo
 
 
 
-let template = document.querySelector("#ListeVoyage")
+let template = document.querySelector("#ListeVoyage");
 
+for (const v of ListeVoyages){
+    console.log(v)
 
- for (const v of ListeVoyages){
-     console.log(v)
-
-     let clone=document.importNode(template.content, true);
-     newContent = clone.firstElementChild.innerHTML
-        .replace(/{{nom}}/g, v._nom)
-        .replace(/{{ville}}/g, v._ville)
-        .replace(/{{id}}/g, v._id)
-        .replace(/{{temperature}}/g, v._temperature);
-        
-    clone.firstElementChild.innerHTML = newContent;
-    document.getElementById("Destination").appendChild(clone)
-
-
-    function Température() {
-        fetch(v._temperature)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(myJson) {
-            document.getElementById("myp").innerHTML= myJson["main"]["temp"] + "°C"
-        })
-      }
+    let clone=document.importNode(template.content, true);
+    newContent = clone.firstElementChild.innerHTML
+    .replace(/{{nom}}/g, v._nom)
+    .replace(/{{ville}}/g, v._ville)
+    .replace(/{{id}}/g, v._id)
+    .replace(/{{temperature}}/g, v._temperature);
     
- }
- let page_id = new URLSearchParams(window.location.search).get("id")
+clone.firstElementChild.innerHTML = newContent;
+document.getElementById("Destination").appendChild(clone)
+
+
+function Température() {
+    fetch(v._temperature)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        document.getElementById("myp").innerHTML= myJson["main"]["temp"] + "°C"
+    })
+    }
+
+}

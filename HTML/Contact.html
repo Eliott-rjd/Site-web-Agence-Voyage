@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <title> Nom </title>
         <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../JS/JavaPourTous.js"></script>
     </head>
 
     <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <nav> 
             <div class="colonne">
             <!--
@@ -25,9 +27,9 @@
             </div>
             
         </nav> 
-
         <h1> A propos</h1>
-        <p>  commentaire a propos de l'agence</p>
+        <p>  Notre agence fournit les voyages aux plus bas prix.<br>
+        De plus nous faisons en sorte que nos voyages soit le moins poluant pour notre planète.</p>
         <h1> Nous contacter </h1>
         <p>
         <fieldset>
@@ -41,7 +43,9 @@
         </fieldset> <br>
             
         <fieldset>
-            Mail : <a href="mailto:agence.jesaispasquoi@cpe.fr"> agence.jesaispasquoi@cpe.fr </a> 
+            Mail : <a href="mailto:agence.jesaispasquoi@cpe.fr?subject=Demande de renseignements&body=Bonjour, je souhaiterais obtenir des renseignements sur "> agence.jesaispasquoi@cpe.fr </a>
+            <!-- L'erreur est du aux espaces de message préremplie de la balise <a>
+                Il ne cause néamoins pas d'erreur!-->
         </fieldset>
             
         <br>
