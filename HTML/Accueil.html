@@ -14,13 +14,6 @@
         <h1><strong>Accueil travel.fr</strong></h1>
         <nav>
             <div class="colonne">
-                <!--
-                <input type="text" placeholder="Recherche"> 
-                <button type="submit"> <img src="../Image/loupe.png" alt="Recherche"> <i class="fa fa-search"></i></button>
-                    
-                Bouton de recheche pas indispensable pour le moment (rechercher un voyage
-                fais appraitre une page avec les voyage contenant le mo clé rechecher
-                !--> 
                 <a href="Accueil.html" class="active">Menu</a>
                 <a href="Panier.html" class="active">Panier</a>
                 </div>
@@ -29,29 +22,37 @@
                 <a href="Authentification.html" class="active">Connexion</a>
                 </div>
         </nav>
-        <!-- Side navigation -->
+        <!-- navigation latéral -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <section class="Filtre">
                 <h2>Filtre</h2>
-                <p>prix min<br>
-                prix max<br>
-                période de disponibilité</p>
-                <section class="animaux acceptés">
+                <button class='reset'>Reset</button>
+                <h4>Prix maximum</h4>
+                <select name="prix maximum" id="prixmax" onchange="Filtrage()">
+                        <option value="100">100€/personne</option>
+                        <option value="200">200€/personne</option>
+                        <option value="500">500€/personne</option>
+                        <option value="800">800€/personne</option>
+                        <option value="9000">900€/personne</option>
+                        <option value="1000">1000€/personne</option>
+                        <option value="" selected>-Prix maximum-</option>
+                </select>
+                <div class="animaux acceptés">
                     <h4>animaux acceptés</h4>
-                    <p>oui<br>
-                    non</p>
-                </section>
-                <section class="petit déj">
-                    <h4>petit déjeuner proposé</h4>
-                    <p>oui<br>
-                    non</p>
-                </section>
-                <section class="handicap">
-                    <h4>handicap</h4>
-                    <p>oui<br>
-                    non</p>
-                </section>
+                    <input type=radio name='choix' value='1' checked> Oui
+                    <input type=radio name='choix' value='0' checked> Non
+                </div>
+                <div class="petit déj">
+                    <h4>Petit déjeuner proposé</h4>
+                    <input type=radio name='choix' value='oui' checked> Oui
+                    <input type=radio name='choix' value='non' checked> Non
+                </div>
+                <div class="handicap">
+                    <h4>Handicap</h4>
+                    <input type=radio name='choix' value='oui' checked> Oui
+                    <input type=radio name='choix' value='non' checked> Non
+                </div>
                 <div id="continents">
                     <button class="BoutonFiltre active" onclick="filterSelection('all')"> Tous les continents</button>
                     <button class="BoutonFiltre" onclick="filterSelection('Europe')"> Europe</button>
@@ -77,22 +78,18 @@
         <div class="btnBarreLateral">
             <span onclick="openNav()"><img src=../Image/MenuLateral.jpg  alt=Filtre></span>
         </div>
-        <div class="principale"> 
-            <p id="Destination"></p>
-            <div class="liens">
-                <template id="ListeVoyage">
-                    <span class=AfficheDynamique>
-                        <a  href="Réservation.html?id={{id}}" id="{{id}}" ><img src={{ville}} alt={{nom}}></a>
-                        <div class="Température"><button onclick="Température()">O</button>
-                            <p id="myp">{{temperature}}</p></div>
-                    </span>
-                </template> 
-            </div>
+        <div id="Destination"> 
+            <template id="ListeVoyage">
+                <span class=AfficheDynamique>
+                    <a  href="Réservation.html?id={{id}}" id="{{id}}" ><img src={{ville}} alt={{nom}} class='image'></a>
+                    <div class="lieu">{{nom}}</div>
+                    <div class="prix">{{prix}} €/personne</div>
+                </span>
+            </template> 
         </div>
         <footer>
             <br>
-            <a href="CGV.html"> CGV </a> 
-            <a href="MentionsLégales.html"> Mentions Légales </a> 
+            <p> CGV Mentions Légales </p> 
             <p>Vous avez des questions? Contactez nous ici:</p>
             <a href="Contact.html"> Contact et à propos </a> 
         </footer>
