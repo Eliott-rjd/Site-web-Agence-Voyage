@@ -27,7 +27,6 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <section class="Filtre">
                 <h2>Filtre</h2>
-                <button class='reset'>Reset</button>
                 <h4>Prix maximum</h4>
                 <select name="prix maximum" id="prixmax" onchange="Filtrage()">
                         <option value="100">100€/personne</option>
@@ -35,44 +34,17 @@
                         <option value="500">500€/personne</option>
                         <option value="800">800€/personne</option>
                         <option value="9000">900€/personne</option>
-                        <option value="1000">1000€/personne</option>
-                        <option value="" selected>-Prix maximum-</option>
+                        <option value="1000" selected>1000€/personne</option>
                 </select>
-                <div class="animaux acceptés">
-                    <h4>animaux acceptés</h4>
-                    <input type=radio name='choix' value='1' checked> Oui
-                    <input type=radio name='choix' value='0' checked> Non
-                </div>
-                <div class="petit déj">
-                    <h4>Petit déjeuner proposé</h4>
-                    <input type=radio name='choix' value='oui' checked> Oui
-                    <input type=radio name='choix' value='non' checked> Non
-                </div>
-                <div class="handicap">
-                    <h4>Handicap</h4>
-                    <input type=radio name='choix' value='oui' checked> Oui
-                    <input type=radio name='choix' value='non' checked> Non
-                </div>
-                <div id="continents">
-                    <button class="BoutonFiltre active" onclick="filterSelection('all')"> Tous les continents</button>
-                    <button class="BoutonFiltre" onclick="filterSelection('Europe')"> Europe</button>
-                    <button class="BoutonFiltre" onclick="filterSelection('Amérique')"> Amérique</button>
-                    <button class="BoutonFiltre" onclick="filterSelection('Océanie')"> Océanie</button>
-                    <button class="BoutonFiltre" onclick="filterSelection('Asie')"> Asie</button>
-                    <button class="BoutonFiltre" onclick="filterSelection('Afrique')"> Afrique</button>
-                </div>
-                <div class='container'>
-                    <div class="filterDiv Europe">Venise</div>
-                    <div class="filterDiv Europe">Athènes</div>
-                    <div class="filterDiv Amérique">LasVegas</div>
-                    <div class="filterDiv Amérique">NewYork</div>
-                    <div class="filterDiv Amérique">Hawaii</div>
-                    <div class="filterDiv Asie">Tokyo</div>
-                    <div class="filterDiv Asie">Hong-Kong</div>
-                    <div class="filterDiv Afrique">Johannesburg</div>
-                    <div class="filterDiv Afrique">Marrakech</div>
-                    <div class="filterDiv Océanie">Sydney</div>
-                </div>
+                <h4>Choix du Continent</h4>
+                <select name="continents" id="continents" onchange="Filtrage()">
+                    <option value="0">Europe</option>
+                    <option value="1">Amérique</option>
+                    <option value="2">Asie</option>
+                    <option value="3">Afrique</option>
+                    <option value="4">Océanie</option>
+                    <option value="5" selected>Tous</option>
+            </select>
             </section>
         </div>
         <div class="btnBarreLateral">
@@ -85,7 +57,8 @@
                     <div class="lieu">{{nom}}</div>
                     <div class="prix">{{prix}} €/personne</div>
                 </span>
-            </template> 
+            </template>
+            
         </div>
         <footer>
             <br>
