@@ -1,12 +1,13 @@
 var mybutton;
 
 
+
 window.onload = function () {
     Filtrage()
     //Pour afficher toutes les images aux lancement
     mybutton = document.getElementById('myBtn')
     //onload mybutton sur ce fichier aussi, sinon il n'apparait pas
-
+    Temperature()
 }
 
 class ListeVoyage {
@@ -35,19 +36,21 @@ var Voyage10=new ListeVoyage('LasVegas','../Image/Amérique/LasVegas.jpeg' ,'10'
 
 const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Voyage8,Voyage9,Voyage10];
 
-//Faire la liste des température à partir des différents lien
+//Faire la liste des température à partir des différents liens
 //Pour pouvoir les modifier plus tard
 Tempe=[]
-for(i = 0; i < ListeVoyages.length; i++){
-fetch(ListeVoyages[i]['_temperature'])
-.then(function(response) {
-    return response.json();
-})
-.then(function(myJson) {
-    Tempe.push(myJson["main"]["temp"] + "°C")
-})
+function Temperature(){
+    for(i = 0; i < ListeVoyages.length; i++){
+    fetch(ListeVoyages[i]['_temperature'])
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        Tempe.push(myJson["main"]["temp"] + "°C")
+    })
+    }
 }
-
+//Comment la charge avant les autres ?
 
 let template = document.querySelector("#ListeVoyage");
 const initial = document.getElementById('Destination').innerHTML;
