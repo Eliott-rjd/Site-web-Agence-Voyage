@@ -1,4 +1,6 @@
 function CalcPrix(){
+    
+    let sejour_id = new URLSearchParams(window.location.search).get("id")
     let jourd= parseInt(document.getElementById("jourd").value,10)
     let moisd= parseInt(document.getElementById("moisd").value,10)
     let annéed= parseInt(document.getElementById("annéed").value,10)
