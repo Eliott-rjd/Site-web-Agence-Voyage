@@ -1,16 +1,11 @@
 
 var mybutton;
 var Select;
-var current
-var btnContainer
-var btnsFiltre
-var current
+
 
 window.onload = function () {
   mybutton = document.getElementById('myBtn')
-  btnContainer = document.getElementById("continents");
-  btnsFiltre = btnContainer.getElementsByClassName("BoutonFiltre");
-  current = document.getElementsByClassName("active");
+  
 }
 
 
