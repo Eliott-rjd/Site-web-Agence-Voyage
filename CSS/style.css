@@ -51,6 +51,17 @@ nav a {
     padding: 14px   16px;
     text-decoration: none;
  }
+ nav span {
+  background-color:  darkblue; 
+  color: white;
+  
+   padding: 14px   16px;
+   text-decoration: none;
+
+ }
+nav span:hover {
+  background-color: cyan;
+}
 
 nav a:hover {
   background-color: cyan;
@@ -104,46 +115,6 @@ nav a:hover {
 	height: 50px;
 }
 
-/*Affichage pour le filtre continent */
-.container {
-  overflow: hidden;
-}
-
-.filterDiv {
-  float: left;
-  background-color: darkgray;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
-  display: none; /* Hidden by default */
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Style the buttons */
-.BoutonFiltre {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
-
-/* Add a light grey background on mouse-over */
-.BoutonFiltre:hover {
-  background-color: #ddd;
-}
-
-/* Add a dark background to the active button */
-.BoutonFiltre.active {
-  background-color: #666;
-  color: white;
-}
 /*fin d'Affichage pour le filtre continent */
 .AfficheDynamique {
   position: relative;
@@ -191,3 +162,55 @@ footer {
   text-align: center;
 }
 
+/*Map*/
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color:red;
+}
+
+.overlay .closemap {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: blue;
+  z-index: 2;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closemap {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}

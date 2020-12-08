@@ -16,12 +16,19 @@
             <div class="colonne">
                 <a href="Accueil.html" class="active">Menu</a>
                 <a href="Panier.html" class="active">Panier</a>
+                <span style="cursor:pointer" onclick="openMap()">Map</span>
                 </div>
                 <div class="colonne">
                 <a href="Contact.html" class="active">Contact & A propos</a>
                 <a href="Authentification.html" class="active">Connexion</a>
                 </div>
         </nav>
+        <div id="Map" class="overlay">
+            <a href="javascript:void(0)" class="closemap" onclick="closeMap()">&times;</a>
+            <div class="overlay-content">
+                <img src=../Image/Map.jpg alt=map>
+            </div>
+          </div>
         <!-- navigation latéral -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

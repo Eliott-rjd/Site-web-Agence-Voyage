@@ -63,7 +63,6 @@ function Filtrage() {
 
     for(i = 0; i < Tempe.length; i++){
         ListeVoyages[i]['_temperature'] = Tempe[i]
-        console.log(ListeVoyages[i]['_temperature'])
         }
 
     var VoyageFiltre = [];
@@ -78,7 +77,6 @@ function Filtrage() {
     for (i = 0; i < ListeVoyages.length; i++) {
         if (ListeVoyages[i]['_prix'] <= prixMax && (ListeVoyages[i]['_continent'] == FiltreContinent ||FiltreContinent == 5)) {
             VoyageFiltre.push(ListeVoyages[i])
-            console.log(VoyageFiltre)
         }
     }
     //Affichage dynamique

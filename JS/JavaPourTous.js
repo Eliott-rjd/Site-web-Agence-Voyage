@@ -36,7 +36,13 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 
 }
+function openMap() {
+  document.getElementById("Map").style.height = "100%";
+}
 
+function closeMap() {
+  document.getElementById("Map").style.height = "0%";
+}
 
 function login() {
   mdpL=document.getElementById('connectpwd').value;
