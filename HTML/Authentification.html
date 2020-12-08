@@ -20,16 +20,29 @@
             </div>
             
         </nav> 
-        <div>
-            <h1> Connexion au compte </h1>
+        <div class='Formulaire'>
+            <h1 class='login'> Connexion au compte : </h1>
             <form>
-            <p> Utilisateur : <br> 
-            <input type="text"><br><br>
+            <p> Email : <br> 
+            <input type="text" id='UtilisateurL'><br><br>
             Mot de passe :  <br> 
-            <input type="text"><br><br>
-            <input type="Submit" value="Connexion">
+            <input type="password" id='motDePasseL'><br><br>
+            <button type="Submit" class="SeConnecter">Se connecter</button>
             </p>
+            </form>
+            <h1  class='register'> S'enregistrer : </h1>
+            <form>
+            <p> Email : <br> 
+            <input type="text" id='UtilisateurR'><br><br>
+            Mot de passe :  <br> 
+            <input type="password" id='MotDePasseR' ><br><br>
+            Répeter mot de passe :  <br> 
+            <input type="password" id='repeat'><br><br>
+            <button type="Submit" class="Enregistrer">S'enregistrer</button>
+            </p>
+            <button id='disconnect' onclick="déconnexion()">Deconnexion</button>
             </form> <br>
+
         </div>
         <footer>
             <br>

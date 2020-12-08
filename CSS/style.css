@@ -166,6 +166,21 @@ nav a:hover {
 
 }
 
+.Formulaire {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.login{
+  padding: 10%;
+  display: block;
+}
+.register{
+  padding: 10%;
+  display: block;
+}
+
+
 footer {
   position: relative;
   left: 0;

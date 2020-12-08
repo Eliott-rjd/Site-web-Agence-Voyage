@@ -3,11 +3,10 @@ var mybutton;
 
 
 window.onload = function () {
-    Filtrage()
-    //Pour afficher toutes les images aux lancement
+    Temperature()
     mybutton = document.getElementById('myBtn')
     //onload mybutton sur ce fichier aussi, sinon il n'apparait pas
-    Temperature()
+    
 }
 
 class ListeVoyage {
@@ -47,8 +46,13 @@ function Temperature(){
     })
     .then(function(myJson) {
         Tempe.push(myJson["main"]["temp"] + "°C")
+        Filtrage()
+        //La fonction temperature est lancé au lancement de la page pour modifier 
+        //les température dans un premier temps puis on appel le filtre pour que les
+        //temperature s'affiche correctement sur les images au lancement 
     })
     }
+    
 }
 //Comment la charge avant les autres ?
 
@@ -70,13 +74,14 @@ function Filtrage() {
     FiltreContinent =parseInt(document.getElementById('continents').value);
     
 
-
+    //Filtre
     for (i = 0; i < ListeVoyages.length; i++) {
         if (ListeVoyages[i]['_prix'] <= prixMax && (ListeVoyages[i]['_continent'] == FiltreContinent ||FiltreContinent == 5)) {
             VoyageFiltre.push(ListeVoyages[i])
             console.log(VoyageFiltre)
         }
     }
+    //Affichage dynamique
     for (var k of VoyageFiltre){
         
         let clone=document.importNode(template.content, true);
