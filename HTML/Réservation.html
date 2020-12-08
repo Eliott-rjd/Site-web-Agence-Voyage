@@ -24,14 +24,14 @@
         <form name="form-prix" onchange="CalcPrix()" action="recap_commande.html" method = "get">
             <section>
                 <h3>Mes informations personnelles:</h3>
-                <p>Prénom*:</p>
+                <label for="prénom">Prénom*:</label>
                 <input id="prénom" type="text" placeholder="Prénom">
-                <p>Nom*:</p>
+                <label for="nom">Nom*:</label>
                 <input id="nom" type="text" placeholder="Nom">
-                <p>Mon adresse email*:</p>
+                <label for="email">Mon adresse email*:</label>
                 <input id="email" type="email" placeholder="Mon email">
-                <p>Mon numéro de téléphone:</p>
-                <input id="télépĥone" type="number" placeholder="">
+                <label for="téléphone">Mon numéro de téléphone:</label>
+                <input id="téléphone" type="number" placeholder="">
             </section>
             <section>
                 <h3>Les informations du voyage:</h3>
@@ -49,9 +49,9 @@
                 <input id="moisr" type="number" value="">
                 /
                 <input id="annéer" type="number" value="">
-                <p>Nombre d'adultes*:</p>
+                <label for="adultes">Nombre d'adultes*:</label>
                 <input id="adultes" type="number" value="">
-                <p>Nombre d'enfants (-12 ans)*:</p>
+                <label for="enfants">Nombre d'enfants (-12 ans)*:</label>
                 <input id="enfants" type="number" value="">
                 <p>Petit-déjeuner:</p>
                 <input type="checkbox" id="subscribedéj" name="oui">
@@ -63,6 +63,7 @@
                 <button type="submit">Valider</button>
             </div> 
         </form>
+        
         <form name="form-remise_à_zéro" action="Réservation.html" method = "get">
             <button type="submit">Remise à zéro</button>
         </form>
