@@ -34,7 +34,7 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-
+  
 }
 function openMap() {
   document.getElementById("Map").style.height = "100%";
@@ -44,46 +44,35 @@ function closeMap() {
   document.getElementById("Map").style.height = "0%";
 }
 
-function login() {
-  mdpL=document.getElementById('connectpwd').value;
-  userL=document.getElementById('connectid').value;
-  if (userL==localStorage.getItem('user') && mdpL==localStorage.getItem('password')){
-    sessionStorage.setItem('isConnected','true');
-} else{
-    alert('Désolé, le mot de passe ou le pseudo rentré est invalide');
+
+
+function register(){
+    if(document.getElementById('MotDePasseR').value==document.getElementById('repeat').value && document.getElementById('UtilisateurR').value!=localStorage.getItem('user')){
+        localStorage.setItem('password',(document.getElementById('MotDePasseR').value));
+        localStorage.setItem('user',(document.getElementById('UtilisateurR').value));
+    } else if(document.getElementById('UtilisateurR').value==localStorage.getItem('user')){
+        alert('Vous êtes déjà inscrit');
+    }
+    else{
+      alert('Entrer le même mot de passe');
+  }
 }
+function SeConnecter(){
+    if (document.getElementById('UtilisateurL').value==localStorage.getItem('user') && document.getElementById('MotDePasseL').value==localStorage.getItem('password')){
+        sessionStorage.setItem('isConnected','true');
+        isConnected();
+    } else{
+        alert('Mot de passe ou utilisateur invalide');
+    }
 }
-
-
-
-function Register() {
-  mdpR=document.getElementById('MotDePasseR').value;
-  mdpRepeat=document.getElementById('repeat').value;
-  userR=document.getElementById('UtilisateurR').value;
-
-  if(mdp == mdpRepeat && user !=localStorage.getItem('user')) {
-  sessionStorage.setItem('password',mdp)
-  localStorage.setItem('user',user);
-  document.getElementsByClassName('register').style.display='none';
-  newspan.innerHTML="Vous vous etes bien incrit, veuillez vous connecter.";
-  newdiv.append(newspan)
-  newdiv.setAttribute('id','registerSuccess');
-  newdiv.display='block';
-  document.getElementById('Formulaire').append(newdiv);
-} else if(user==localStorage.getItem('user')){
-  alert('Vous êtes déjà inscrit sous ce pseudo');
-}
-}
-
 function isConnected(){
-  if(sessionStorage.getItem('isConnected')==='true'){
-    window.open("../HTML/Mon Compte-info")
-  }
+    if(sessionStorage.getItem('isConnected')=='true'){
+      document.getElementById('compte').href = '../HTML/Mon Compte-info.html';
+
+    }
 }
 
-
-function déconnexion() {
-  sessionStorage.clear();
-  window.location.reload();
-  }
-
+function déconnexion(){
+    sessionStorage.clear();
+    window.location.reload();
+}

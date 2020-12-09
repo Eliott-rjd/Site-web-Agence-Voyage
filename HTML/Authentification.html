@@ -16,29 +16,29 @@
             </div>
             <div class="colonne">
             <a href="Contact.html" class="active">Contact & A propos</a>
-            <a href="Authentification.html" class="active">Connexion</a>
+            <a href="Authentification.html" id='compte' class="active" onclick="isConnected()">Connexion</a>
             </div>
             
         </nav> 
         <div class='Formulaire'>
             <h1 class='login'> Connexion au compte : </h1>
-            <form>
+            <form id='connection'>
             <p> Email : <br> 
-            <input type="text" id='UtilisateurL'><br><br>
+            <input type="text" id='UtilisateurL' placeholder='Email'><br><br>
             Mot de passe :  <br> 
-            <input type="password" id='motDePasseL'><br><br>
-            <button type="Submit" class="SeConnecter">Se connecter</button>
+            <input type="password" id='MotDePasseL' placeholder="Mot de Passe"><br><br>
+            <button type="Submit" class="SeConnecter" onclick="SeConnecter()">Se connecter</button>
             </p>
             </form>
             <h1  class='register'> S'enregistrer : </h1>
-            <form>
+            <form id='enregistrement'>
             <p> Email : <br> 
-            <input type="text" id='UtilisateurR'><br><br>
+            <input type="text" id='UtilisateurR' placeholder='Email'><br><br>
             Mot de passe :  <br> 
-            <input type="password" id='MotDePasseR' ><br><br>
+            <input type="password" id='MotDePasseR' placeholder="Mot de Passe"><br><br>
             Répeter mot de passe :  <br> 
-            <input type="password" id='repeat'><br><br>
-            <button type="Submit" class="Enregistrer">S'enregistrer</button>
+            <input type="password" id='repeat' placeholder="Répeter Mot de Passe"><br><br>
+            <button type="Submit" class="Enregistrer" onclick="register()">S'enregistrer</button>
             </p>
             <button id='disconnect' onclick="déconnexion()">Deconnexion</button>
             </form> <br>
