@@ -51,14 +51,14 @@ nav a {
     padding: 14px   16px;
     text-decoration: none;
  }
- nav span {
-  background-color:  darkblue; 
-  color: white;
-  
-   padding: 14px   16px;
-   text-decoration: none;
+nav span {
+background-color:  darkblue; 
+color: white;
 
- }
+  padding: 14px   16px;
+  text-decoration: none;
+
+}
 nav span:hover {
   background-color: cyan;
 }
@@ -68,6 +68,16 @@ nav a:hover {
 }
 .active {
   background-color: darkblue;
+}
+
+h2 {
+  text-decoration: underline;
+  color: darkblue;
+}
+
+h3 {
+  text-decoration: underline;
+  color: blue;
 }
 
 /* Menu latéral */
@@ -215,3 +225,10 @@ footer {
   right: 35px;
   }
 }
+
+
+.Infos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+

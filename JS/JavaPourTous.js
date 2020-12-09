@@ -66,8 +66,8 @@ function SeConnecter(){
 }
 function isConnected(){
     if(sessionStorage.getItem('isConnected')=='true'){
-      document.getElementById('compte').href = '../HTML/Mon Compte-info.html';
-
+      document.getElementById('compte').href = '../HTML/MonCompte-info.html';
+      window.location.href = '../HTML/MonCompte-info.html';
     }
 }
 
