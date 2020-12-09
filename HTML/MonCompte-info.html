@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon Compte-info</title>
+        <script src="../JS/JavaPourTous.js"></script>
+        <script src="../JS/MonCompte-info.js"></script>
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <nav> 
+            <div class="colonne">
+            <a href="Accueil.html" class="active">Menu</a>
+            <a href="Panier.html" class="active">Panier</a>
+            </div>
+            <div class="colonne">
+            <a href="Contact.html" class="active">Contact & A propos</a>
+            <a href="Authentification.html" class="active">Connexion</a>
+            </div>
+            
+        </nav> 
+        <div class='Infos'>
+            <div class='MonCompte'>
+                <h3>Mes informations personnelles:</h3>
+                <p>Prénom:</p>
+                <input type="text" placeholder="Prénom">
+                <p>Nom:</p>
+                <input type="text" placeholder="Nom">
+                <p>Mon adresse postale:</p>
+                <input type="text" placeholder="Mon adresse">
+                <p>Ville:</p>
+                <input type="text" placeholder="Ma ville">
+                <p>Code postale:</p>
+                <input type="number" value="">
+                <p>Pays:</p>
+                <input type="text" placeholder="Pays">
+                <p>Mon adresse mail:</p>
+                <input type="text" id='email'>
+                <p>Mon numéro de téléphone:</p>
+                <input type="tel" value="">
+            </div>
+            <div class='MonCompte'>
+                <h3>Mes moyens de paiement:</h3>
+                <p>Numéro de carte:</p>
+                <input type="number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                <p>Date d'expiration:</p>
+                <input type="date" value="">   
+                <p>Code de sécurité:</p>
+                <input type="number" value="">             
+            <div id='acces'>
+                <h3>Accès à votre compte:</h3>
+                <p>Mon ancien mot de passe:</p>
+                <input type="password" value="">
+                <p>Mon nouveau mot de passe:</p>
+                <input type="password" value="">
+                <p>Confirmer mon nouveau mot de passe:</p>
+                <input type="password" value="">      
+            </div><br>
+            <button id='disconnect' onclick="déconnexion()">Deconnexion</button>
+            </div>
+        </div>
+        <br>
+        <footer>
+            <br>
+            <p> CGV Mentions Légales </p> 
+            <p>Vous avez des questions? Contactez nous ici:</p>
+            <a href="Contact.html"> Contact et à propos </a> 
+        </footer>
+    </body>
+
+
+
+</html>
