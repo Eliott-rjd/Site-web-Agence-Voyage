@@ -1,73 +1,114 @@
+class ListeVoyage {
+    constructor(nom,ville,id,continent,prix,animaux,temperature) {
+        this._nom=nom;
+        this._ville=ville; 
+        this._id=id;
+        this._continent=continent;
+        this._prix=prix;
+        this._animaux=animaux;
+        this._temperature=temperature;
+    }
+}
+
+let Voyage1=new ListeVoyage('Venise','../Image/Europe/Venise.jpeg' ,'1','0','200','true',"https://api.openweathermap.org/data/2.5/weather?q=Venise&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+let Voyage2=new ListeVoyage('Athènes','../Image/Europe/Athènes.jpeg' ,'2','0','100','false',"https://api.openweathermap.org/data/2.5/weather?q=Athènes&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage3=new ListeVoyage('Hong-Kong','../Image/Asie/Hong-Kong.jpeg' ,'3','2','500','false',"https://api.openweathermap.org/data/2.5/weather?q=Hong Kong&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage4=new ListeVoyage('Tokyo','../Image/Asie/Tokyo.jpeg' ,'4','2','800','true',"https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage5=new ListeVoyage('Sydney','../Image/Océanie/Sydney.jpeg' ,'5','4','800','true',"https://api.openweathermap.org/data/2.5/weather?q=Sydney&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage6=new ListeVoyage('Johannesburg','../Image/Afrique/Johannesburg.jpeg' ,'6','3','100','true',"https://api.openweathermap.org/data/2.5/weather?q=Johannesburg&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage7=new ListeVoyage('Marrakech','../Image/Afrique/Marrakech.jpeg','7','3','200','false',"https://api.openweathermap.org/data/2.5/weather?q=Marrakech&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage8=new ListeVoyage('Hawaii','../Image/Amérique/Hawaii.jpeg' ,'8','1','1000','true',"https://api.openweathermap.org/data/2.5/weather?q=Hawaii&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage9=new ListeVoyage('NewYork','../Image/Amérique/NewYork.jpeg' ,'9','1','1000','true',"https://api.openweathermap.org/data/2.5/weather?q=New York&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+var Voyage10=new ListeVoyage('LasVegas','../Image/Amérique/LasVegas.jpeg' ,'10','1','900','false',"https://api.openweathermap.org/data/2.5/weather?q=Las Vegas&appid=5c94e08c097f3277a355b6688d8a6b24&units=metric");
+
+
+const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Voyage8,Voyage9,Voyage10];
+
+
 function CalcPrix(){
-    
+
+
     let sejour_id = new URLSearchParams(window.location.search).get("id")
-    let jourd= parseInt(document.getElementById("jourd").value,10)
-    let moisd= parseInt(document.getElementById("moisd").value,10)
-    let annéed= parseInt(document.getElementById("annéed").value,10)
-    let jourr= parseInt(document.getElementById("jourr").value,10)
-    let moisr= parseInt(document.getElementById("moisr").value,10)
-    let annéer= parseInt(document.getElementById("annéer").value,10)
+   // document.getElementById("JS.id").innerHTML= sejour_id
+
+   for(k of ListeVoyages) {
+    if(sejour_id == k._id) {
+        p_standard_jour = k._prix 
+    }
+}
+
+console.log(p_standard_jour)
+
+    let dated= document.getElementById("dated").value
+    let dater= document.getElementById("dater").value
     let adultes= parseInt(document.getElementById("adultes").value,10)
     let enfants= parseInt(document.getElementById("enfants").value,10)
     let déj= document.getElementById("subscribedéj").checked
     let Prénom = document.getElementById("prénom")
     let Nom = document.getElementById("nom")
     let email = document.getElementById("email")
-    let num_téléphone = parseInt(document.getElementById("télépĥone").value,10)
+    let num_téléphone = (document.getElementById("téléphone"))
     
-    document.getElementById("prénom_recap").innerHTML= Prénom
-    document.getElementById("nom_recap").innerHTML= Nom
-    document.getElementById("email_recap").innerHTML= email
-    document.getElementById("téléphone_recap").innerHTML= num_téléphone
-    document.getElementById("adultes_recap").innerHTML= adultes
-    document.getElementById("enfants_recap").innerHTML= enfants
-    document.getElementById("jourd_recap").innerHTML= jourd
-    document.getElementById("jourr_recap").innerHTML= jourr
-    document.getElementById("moisd_recap").innerHTML= moisd
-    document.getElementById("moisr_recap").innerHTML= moisr
-    document.getElementById("annéed_recap").innerHTML= annéed
-    document.getElementById("annéer_recap").innerHTML= annéer
+
+  //  document.getElementById("prénom_recap").innerHTML= Prénom
+  // document.getElementById("nom_recap").innerHTML= Nom
+ //  document.getElementById("email_recap").innerHTML= email
+  //  document.getElementById("téléphone_recap").innerHTML= num_téléphone
+  //  document.getElementById("adultes_recap").innerHTML= adultes
+   // document.getElementById("enfants_recap").innerHTML= enfants
+  //  document.getElementById("jourd_recap").innerHTML= jourd
+   // document.getElementById("jourr_recap").innerHTML= jourr
+  //  document.getElementById("moisd_recap").innerHTML= moisd
+  //  document.getElementById("moisr_recap").innerHTML= moisr
+  //  document.getElementById("annéed_recap").innerHTML= annéed
+  //  document.getElementById("annéer_recap").innerHTML= annéer
     
-    var num_réservation = math.floor(math.random()*100000)
+    var num_réservation = Math.floor(Math.random()*100000)
     
-    document.getElementById("num_réservation").innerHTML= num_réservation
+   // document.getElementById("num_réservation").innerHTML= num_réservation
     
-    var date_d = new date(jourd/moisd/annéed)
-    var date_r = new date(jourr/moisr/annéer)
+    var date_d = new Date(dated)
+    var date_r = new Date(dater)
     var Diff_temps = date_r.getTime() - date_d.getTime()
     var Diff_jours = Diff_temps / (1000 * 3600 * 24) 
-    print(Diff_jours)
+    console.log(Diff_jours)
     
-    let Autorisé = False
+    var Autorisé = 0
     
     if (adultes > 0) {
-        Autorisé == True
+        Autorisé = 1
     } else {
-        Autorisé == False
-        a = print("Il doit au moins y avoir un adulte pour valider un voyage, que ce soit pour accompagner les enfants ou pour partir en voyage");
+        Autorisé == 0
+        a = console.log("Il doit au moins y avoir un adulte pour valider un voyage, que ce soit pour accompagner les enfants ou pour partir en voyage");
     }
-    p_standard_jour = 50
-    
-    
-    if (Autorisé == True) {
+
+    if (Autorisé == 1) {
         if (Diff_jours > 0) {
             p_adultes = p_standard_jour
             p_adultes_tot = p_adultes*adultes
-            p_enfants = 0,4*p_adultes
-            p_enfants_tot = p_enfants*enfants
-            if (déj == True) {
-                p_déj = "12"
-                p_déj_tot = p_déj*(adultes+enfants)
-                document.getElementById("subscribedéj_recap").innerHTML= "Voyage avec petits déjeuners"
+            if (enfants == "") {
+                p_enfants_tot= 0
             } else {
-                p_déj_tot = "0"
-                document.getElementById("subscribedéj_recap").innerHTML= "Voyage sans petit déjeuner"
+            p_enfants = 0.4*p_adultes
+            p_enfants_tot = p_enfants*enfants
+            }
+            if (déj == true) {
+                p_déj = 12
+                p_déj_tot = p_déj*(adultes+enfants)*Diff_jours
+               // document.getElementById("subscribedéj_recap").innerHTML= "Voyage avec petits déjeuners"
+            } else {
+                p_déj_tot = 0
+              //  document.getElementById("subscribedéj_recap").innerHTML= "Voyage sans petit déjeuner"
             } 
-            document.getElementById("résultat").innerHTML= (
-            (prix_tot = (p_adultes_tot + p_enfants_tot + p_déj_tot)* Diff_jours));                
+            document.getElementById("résultat").innerHTML= ((prix_tot = (p_adultes_tot + p_enfants_tot + p_déj_tot) + 0.3*(p_adultes_tot + p_enfants_tot)*Diff_jours) + "€");      // Le prix par jours est calculé en fonction des dépenses sur place, soit 30% du prix du voyage par personne.          
         } else {
-            a = print("La date de retour doit être postérieure à la date de départ")
+            a = console.log("La date de retour doit être postérieure à la date de départ")
+            document.getElementById("résultat").innerHTML= (prix_tot = 0);
         }
+    } else { document.getElementById("résultat").innerHTML= (prix_tot = 0);
+}
+
+return prix_tot
+    
     }
-    return prix_tot
-    }
+
