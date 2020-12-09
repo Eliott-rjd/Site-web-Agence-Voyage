@@ -27,6 +27,7 @@ const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Vo
 
 function CalcPrix(){
 
+
     let sejour_id = new URLSearchParams(window.location.search).get("id")
    // document.getElementById("JS.id").innerHTML= sejour_id
 
@@ -110,3 +111,4 @@ console.log(p_standard_jour)
 return prix_tot
     
     }
+

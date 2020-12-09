@@ -16,12 +16,19 @@
             <div class="colonne">
                 <a href="Accueil.html" class="active">Menu</a>
                 <a href="Panier.html" class="active">Panier</a>
+                <span style="cursor:pointer" onclick="openMap()">Map</span>
                 </div>
                 <div class="colonne">
                 <a href="Contact.html" class="active">Contact & A propos</a>
                 <a href="Authentification.html" class="active">Connexion</a>
                 </div>
         </nav>
+        <div id="Map" class="overlay">
+            <a href="javascript:void(0)" class="closemap" onclick="closeMap()">&times;</a>
+            <div class="overlay-content">
+                <img src=../Image/Map.jpg alt=map>
+            </div>
+          </div>
         <!-- navigation latéral -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -45,6 +52,7 @@
                     <option value="4">Océanie</option>
                     <option value="5" selected>Tous</option>
             </select>
+            <br>
             </section>
         </div>
         <div class="btnBarreLateral">
@@ -55,7 +63,7 @@
                 <span class=AfficheDynamique>
                     <a  href="Réservation.html?id={{id}}" id="{{id}}" ><img src={{ville}} alt={{nom}} class='image'></a>
                     <div class="lieu">{{nom}}</div>
-                    <div class="prix">{{prix}} €/personne</div>
+                    <div class="prix">{{prix}} €/personne<div class='temperature'>{{temperature}}</div></div>
                 </span>
             </template>
             

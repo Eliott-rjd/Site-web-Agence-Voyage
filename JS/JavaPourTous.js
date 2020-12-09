@@ -85,3 +85,4 @@ function déconnexion() {
   sessionStorage.clear();
   window.location.reload();
   }
+
