@@ -24,51 +24,44 @@
         <form name="form-prix" onchange="CalcPrix()" action="recap_commande.html" method = "get">
             <section>
                 <h3>Mes informations personnelles:</h3>
-                <p>Prénom*:</p>
-                <input id="prénom" type="text" placeholder="Prénom">
-                <p>Nom*:</p>
-                <input id="nom" type="text" placeholder="Nom">
-                <p>Mon adresse email*:</p>
-                <input id="email" type="email" placeholder="Mon email">
-                <p>Mon numéro de téléphone:</p>
-                <input id="télépĥone" type="number" placeholder="">
+                <label for="prénom">Prénom*:</label>
+                <input id="prénom" class="modif" type="text" placeholder="Prénom">
+                <label for="nom">Nom*:</label>
+                <input id="nom" class="modif" type="text" placeholder="Nom">
+                <label for="email">Mon adresse email*:</label>
+                <input id="email" class="modif" type="email" placeholder="Mon email">
+                <label for="téléphone">Mon numéro de téléphone:</label>
+                <input id="téléphone" class="modif" type="number" placeholder="Téléphone">
             </section>
-            <section>
+            <section id = "reset">
                 <h3>Les informations du voyage:</h3>
                 
                 <p>Date de départ*:</p>
-                <input id="jourd" type="number" value="">
-                /
-                <input id="moisd" type="number" value="">
-                /
-                <input id="annéed" type="number" value="">
+                <input id="dated" class="modif" type="date" value="2020-12-10" min="2020-12-01" max="2021-12-31">
 
                 <p>Date de retour*:</p>
-                <input id="jourr" type="number" value="">
-                /
-                <input id="moisr" type="number" value="">
-                /
-                <input id="annéer" type="number" value="">
-                <p>Nombre d'adultes*:</p>
-                <input id="adultes" type="number" value="">
-                <p>Nombre d'enfants (-12 ans)*:</p>
-                <input id="enfants" type="number" value="">
+                <input id="dater" class="modif" type="date" value="2020-12-10" min="2020-12-01" max="2021-12-31"> 
+
+                <label for="adultes">Nombre d'adultes*:</label>
+                <input id="adultes" class="modif" type="number" value="">
+                <label for="enfants">Nombre d'enfants (-12 ans)*:</label>
+                <input id="enfants" class="modif" type="number" value="">
                 <p>Petit-déjeuner:</p>
-                <input type="checkbox" id="subscribedéj" name="oui">
+                <input type="checkbox" id="subscribedéj" class="modif" name="oui">
                 <label for="subscribedéj"> Prendre un petit-déjeuner </label>
             </section>
             <p>Prix total:</p>
-            <p id= "résultat"></p>
+            <p id= "résultat" ></p>
             <div>
                 <button type="submit">Valider</button>
             </div> 
         </form>
-        <form name="form-remise_à_zéro" action="Réservation.html" method = "get">
-            <button type="submit">Remise à zéro</button>
-        </form>
+
+        <button onclick="document.getElementById('reset').value = ''">Remise à zéro</button>
+
         <section>
             <h2>Demande de renseignements:</h2>
-            <form name="form-renseignement" action= "mailto:axel.guillet6@gmail.com?subject=Renseignement?body=renseignement" method = "post">
+            <form name="form-renseignement" action= "mailto:axel.guillet6@gmail.com?subject=aide?body=renseignement" method = "post">
                 <label for="nom2">Nom :</label>
                 <input id="nom2" type="text" placeholder="Nom">
                 <label for="email2">e-mail :</label>
