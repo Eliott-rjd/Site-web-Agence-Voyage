@@ -40,6 +40,7 @@ for(k of ListeVoyages) {
 
 function CalcPrix(){
     var position = window.location.href.indexOf("!")
+    //Si le lien est la page de reserv(il n'y a pas de !) on entre dans le if sinon dans le recap
     L = []
     if (position == -1) {
  
@@ -95,7 +96,7 @@ function CalcPrix(){
     } else { document.getElementById("résultat").innerHTML= (prix_tot = 0);
 }
 } else {
-
+    //les infos sont envoyer sur le localStorage, nous n'avons pas eu le temps de les récuperer avec un programme fonctionnel
     Prénom_recap = localStorage.getItem("Prénom")
     Nom_recap = localStorage.getItem("Nom")
     email_recap = localStorage.getItem("Email")
