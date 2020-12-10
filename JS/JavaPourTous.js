@@ -59,6 +59,8 @@ function register(){
 function SeConnecter(){
     if (document.getElementById('UtilisateurL').value==localStorage.getItem('user') && document.getElementById('MotDePasseL').value==localStorage.getItem('password')){
         sessionStorage.setItem('isConnected','true');
+        sessionStorage.setItem('email',document.getElementById('UtilisateurL').value);
+        
         isConnected();
     } else{
         alert('Mot de passe ou utilisateur invalide');
@@ -67,11 +69,28 @@ function SeConnecter(){
 function isConnected(){
     if(sessionStorage.getItem('isConnected')=='true'){
       document.getElementById('compte').href = '../HTML/MonCompte-info.html';
-      window.location.href = '../HTML/MonCompte-info.html';
+      document.location.href = '../HTML/MonCompte-info.html';
     }
 }
 
 function déconnexion(){
     sessionStorage.clear();
     window.location.reload();
+    window.location.href='../HTML/Accueil.html'
+}
+
+class Image{
+  constructor(src){
+    this.src=src
+  }
+
+}
+
+
+var canvas = document.getElementById("moncanvas");
+var context = canvas.getContext("2d");
+var img = new Image();
+img.src = "../Image/Map.jpg";
+img.onload = function() {
+context.drawImage(img, 0, 0, 500, 400);
 }

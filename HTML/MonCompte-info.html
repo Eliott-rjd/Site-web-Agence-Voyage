@@ -28,39 +28,47 @@
                 <input type="text" placeholder="Prénom" id='Prenom'>
                 <p id='MonPrénom' class="Afficheinfo"></p>
                 <p>Nom:</p>
-                <input type="text" placeholder="Nom">
+                <input type="text" placeholder="Nom" id='Nom'>
+                <p id='MonNom' class="Afficheinfo"></p>
                 <p>Mon adresse postale:</p>
-                <input type="text" placeholder="Mon adresse">
+                <input type="text" placeholder="Mon adresse" id='Adresse'>
+                <p id='MonAdresse' class="Afficheinfo"></p>
                 <p>Ville:</p>
-                <input type="text" placeholder="Ma ville">
+                <input type="text" placeholder="Ma ville" id='Ville'>
+                <p id='MaVille' class="Afficheinfo"></p>
                 <p>Code postale:</p>
-                <input type="number" value="">
+                <input type="number" value="" id='CodePostal' placeholder="11111">
+                <p id='MonCodePostal' class="Afficheinfo"></p>
                 <p>Pays:</p>
-                <input type="text" placeholder="Pays">
+                <input type="text" placeholder="Pays" id='Pays'>
+                <p id='MonPays' class="Afficheinfo"></p>
                 <p>Mon adresse mail:</p>
                 <p id='email' class='Afficheinfo'></p>
                 <p>Mon numéro de téléphone:</p>
-                <input type="tel" value="">
+                <input type="tel" value="" id='Tel' placeholder="0606060606">
+                <p id='MonTel' class="Afficheinfo"></p>
             </div>
             <div class='MonCompte'>
                 <h3>Mes moyens de paiement:</h3>
                 <p>Numéro de carte:</p>
-                <input type="number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                <input type="number" placeholder="XXXX-XXXX-XXXX-XXXX" id='CarteBleu'>
+                <p id='MaCarte' class="Afficheinfo"></p>
                 <p>Date d'expiration:</p>
                 <input type="date" value="">   
                 <p>Code de sécurité:</p>
-                <input type="number" value="">             
+                <input type="number" value="" id='CodeSecu' placeholder="Cryptogramme"> 
+                <p id='MonCode' class="Afficheinfo"></p>            
             <div id='acces'>
                 <h3>Accès à votre compte:</h3>
                 <p>Mon ancien mot de passe:</p>
-                <input type="password" value="" id='AncienMDP'>
+                <input type="password" id='AncienMDP' placeholder="Ancien Mot de passe">
                 <p>Mon nouveau mot de passe:</p>
-                <input type="password" value="" id='NewMDP'>
+                <input type="password" id='NewMDP' placeholder="Nouveau Mot de passe">
                 <p>Confirmer mon nouveau mot de passe:</p>
-                <input type="password" value="" id='confirmMDP'>      
+                <input type="password" id='confirmMDP' placeholder="Confirmer Mot de passe">      
             </div><br>
             <button id='modifInfo' onclick="chgt()">Sauvegarder Modification</button>
-
+            <button id='MDP' onclick="ModifMDP()">Modifier Mot de Passe</button>
             <button id='disconnect' onclick="déconnexion()">Deconnexion</button>
             </div>
         </div>
