@@ -232,3 +232,13 @@ footer {
   grid-template-columns: 50% 50%;
 }
 
+.MonCompte {
+  text-align: center;
+}
+
+
+.Afficheinfo{
+  border: solid;
+  border-color: rgb(255, 7, 7);
+  background-color: rgba(18, 1, 255, 0.4);
+}

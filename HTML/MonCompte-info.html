@@ -25,7 +25,8 @@
             <div class='MonCompte'>
                 <h3>Mes informations personnelles:</h3>
                 <p>Prénom:</p>
-                <input type="text" placeholder="Prénom">
+                <input type="text" placeholder="Prénom" id='Prenom'>
+                <p id='MonPrénom' class="Afficheinfo"></p>
                 <p>Nom:</p>
                 <input type="text" placeholder="Nom">
                 <p>Mon adresse postale:</p>
@@ -37,7 +38,7 @@
                 <p>Pays:</p>
                 <input type="text" placeholder="Pays">
                 <p>Mon adresse mail:</p>
-                <input type="text" id='email'>
+                <p id='email' class='Afficheinfo'></p>
                 <p>Mon numéro de téléphone:</p>
                 <input type="tel" value="">
             </div>
@@ -52,12 +53,14 @@
             <div id='acces'>
                 <h3>Accès à votre compte:</h3>
                 <p>Mon ancien mot de passe:</p>
-                <input type="password" value="">
+                <input type="password" value="" id='AncienMDP'>
                 <p>Mon nouveau mot de passe:</p>
-                <input type="password" value="">
+                <input type="password" value="" id='NewMDP'>
                 <p>Confirmer mon nouveau mot de passe:</p>
-                <input type="password" value="">      
+                <input type="password" value="" id='confirmMDP'>      
             </div><br>
+            <button id='modifInfo' onclick="chgt()">Sauvegarder Modification</button>
+
             <button id='disconnect' onclick="déconnexion()">Deconnexion</button>
             </div>
         </div>
