@@ -1,8 +1,3 @@
-
-window.addEventListener("load", function () {​​​​​
-    CalcPrix()
-})
-
 class ListeVoyage {
     constructor(nom,ville,id,continent,prix,animaux,temperature) {  
         this._nom=nom;
@@ -150,4 +145,3 @@ localStorage.setItem("prix",prix_tot)
 function Modif(){
     window.history.back()
 }
-
