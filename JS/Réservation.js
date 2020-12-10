@@ -1,10 +1,7 @@
-//var mybutton;
 
-
-//window.onload = function () {​​​​​
-//    mybutton = document.getElementById('myBtn')
-//    CalcPrix()
-//}
+window.addEventListener("load", function () {​​​​​
+    CalcPrix()
+})
 
 class ListeVoyage {
     constructor(nom,ville,id,continent,prix,animaux,temperature) {  
@@ -47,6 +44,9 @@ for(k of ListeVoyages) {
 
 
 function CalcPrix(){
+    var position = window.location.href.indexOf("!")
+    L = []
+    if (position == -1) {
  
     dated= document.getElementById("dated").value
     dater= document.getElementById("dater").value
@@ -99,25 +99,53 @@ function CalcPrix(){
         }
     } else { document.getElementById("résultat").innerHTML= (prix_tot = 0);
 }
+} else {
 
-return prix_tot    
+    Prénom_recap = localStorage.getItem("Prénom")
+    Nom_recap = localStorage.getItem("Nom")
+    email_recap = localStorage.getItem("Email")
+    dated_recap = localStorage.getItem("date_d")
+    dater_recap = localStorage.getItem("date_r")
+    téléphone_recap = localStorage.getItem("Téléphone")
+    num_réserv = localStorage.getItem("num_réserv")
+    adultes_recap = localStorage.getItem("adultes")
+    enfants_recap = localStorage.getItem("enfants")
+    déj_recap = localStorage.getItem("déj")
+    nom_voyage = localStorage.getItem("nom_voyage")
+    prix_recap = localStorage.getItem("prix")
 
-//  document.getElementById("nom_destination_recap").innerHTML= nom_voyage
-    document.getElementById("prénom_recap").innerHTML= Prénom
-    document.getElementById("nom_recap").innerHTML= Nom
-    document.getElementById("email_recap").innerHTML= email
-    document.getElementById("téléphone_recap").innerHTML= num_téléphone
-    document.getElementById("adultes_recap").innerHTML= adultes
-    document.getElementById("enfants_recap").innerHTML= enfants
-    document.getElementById("dated_recap").innerHTML= dated
-    document.getElementById("dater_recap").innerHTML= dater
-  //  document.getElementById("résultat_recap").innerHTML= prix_tot
-    document.getElementById("num_réservation").innerHTML= num_réservation
-  //  document.getElementById("subscribedéj_recap").innerHTML= "Voyage avec petits déjeuners"
-  //  document.getElementById("subscribedéj_recap").innerHTML= "Voyage sans petit déjeuner"
+    document.getElementById("nom_destination_recap").innerHTML= nom_voyage
+    document.getElementById("prénom_recap").innerHTML= Prénom_recap
+    document.getElementById("nom_recap").innerHTML= Nom_recap
+    document.getElementById("email_recap").innerHTML= email_recap
+    document.getElementById("téléphone_recap").innerHTML= téléphone_recap
+    document.getElementById("adultes_recap").innerHTML= adultes_recap
+    document.getElementById("enfants_recap").innerHTML= enfants_recap
+    document.getElementById("dated_recap").innerHTML= dated_recap
+    document.getElementById("dater_recap").innerHTML= dater_recap
+    document.getElementById("résultat_recap").innerHTML= prix_recap
+    document.getElementById("num_réservation").innerHTML= num_réserv
+
+    if (déj_recap == true) {
+        document.getElementById("subscribedéj_recap").innerHTML= "Voyage avec petits déjeuners"
+    } else {
+        document.getElementById("subscribedéj_recap").innerHTML= "Voyage sans petit déjeuner"
+    }
+}
+localStorage.setItem("Prénom",Prénom)
+localStorage.setItem("Nom",Nom)
+localStorage.setItem("Email",email)
+localStorage.setItem("date_d",dated)
+localStorage.setItem("date_r",dater)
+localStorage.setItem("Téléphone",num_téléphone)
+localStorage.setItem("num_réserv",num_réservation)
+localStorage.setItem("adultes",adultes)
+localStorage.setItem("enfants",enfants)
+localStorage.setItem("déj",déj)
+localStorage.setItem("nom_voyage",nom_voyage)
+localStorage.setItem("prix",prix_tot)
 
 }
-
 
 function Modif(){
     window.history.back()

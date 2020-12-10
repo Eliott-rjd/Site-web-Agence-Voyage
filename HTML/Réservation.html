@@ -10,7 +10,6 @@
 
     <body>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-        <h1><strong>Réservation du voyage: </strong></h1>
         <nav>
             <div class="colonne">
                 <a href="Accueil.html" class="active">Menu</a>
@@ -21,7 +20,8 @@
                 <a href="Authentification.html" class="active">Connexion</a>
                 </div>
         </nav>
-        <form name="form-prix" onchange="CalcPrix()" action="recap_commande.html" method = "get">
+        <h1><strong>Réservation du voyage: </strong></h1>
+        <form name="form-prix" onchange="CalcPrix()" action="recap_commande!.html" method = "get">
             <section>
                 <h3>Mes informations personnelles:</h3>
                 <label for="prénom">Prénom*:</label>
@@ -34,7 +34,7 @@
                 <input id="téléphone" class="modif" type="number" placeholder="Téléphone">
 
             </section>
-            <section id = "reset">
+            <section>
                 <h3>Les informations du voyage:</h3>
                 
                 <p>Destination:</p>
@@ -59,11 +59,11 @@
             <p>Prix total:</p>
             <p id= "résultat" ></p>
             <div>
-                <button type="submit">Valider</button>
+                <button type="submit" onclick="Liste()">Valider</button>
             </div> 
         </form>
 
-        <button onclick="document.getElementById('reset').value = ''">Remise à zéro</button>
+        <button onclick="Modif()" id="myReset" title="Reset page">Remise à zéro</button>
 
         <section>
             <h2>Demande de renseignements:</h2>
