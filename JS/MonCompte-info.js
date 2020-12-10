@@ -2,10 +2,12 @@ var MonPrenom ;
 var Monemail = sessionStorage.getItem('email');
 var mybutton;
 
-window.onload = function () {
+window.addEventListener("load",function () {
     mybutton = document.getElementById('myBtn');
     document.getElementById('email').innerHTML = Monemail;
-  }
+    redirection()
+
+  })
 
 
 function chgt() {

@@ -1,13 +1,8 @@
-var mybutton;
 
-
-
-window.onload = function () {
+window.addEventListener('load',function () {
     Temperature()
-    mybutton = document.getElementById('myBtn')
-    //onload mybutton sur ce fichier aussi, sinon il n'apparait pas
     
-}
+})
 
 class ListeVoyage {
     constructor(nom,ville,id,continent,prix,animaux,temperature) {

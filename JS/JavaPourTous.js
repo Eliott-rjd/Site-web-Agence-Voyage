@@ -1,11 +1,10 @@
 var mybutton;
-var Select;
 
 
-window.onload = function () {
-  mybutton = document.getElementById('myBtn')
-  
-}
+window.addEventListener("load",function () {
+  mybutton = document.getElementById('myBtn');
+  redirection();
+})
 
 
 window.onscroll = function () { scrollFunction() };
@@ -73,24 +72,31 @@ function isConnected(){
     }
 }
 
+function redirection() {
+  if(sessionStorage.getItem('isConnected') =='true'){
+    document.getElementById('compte').href = '../HTML/MonCompte-info.html';
+  }
+}
+
 function déconnexion(){
     sessionStorage.clear();
     window.location.reload();
     window.location.href='../HTML/Accueil.html'
 }
 
-class Image{
-  constructor(src){
-    this.src=src
-  }
 
-}
+//Non fonctionnel
+//class Image{
+// constructor(src){
+//    this.src=src
+// }
 
+//}
 
-var canvas = document.getElementById("moncanvas");
-var context = canvas.getContext("2d");
-var img = new Image();
-img.src = "../Image/Map.jpg";
-img.onload = function() {
-context.drawImage(img, 0, 0, 500, 400);
-}
+//var cvs = document.getElementById("moncanvas");
+//var context = cvs.getContext("2d");
+//var img = new Image();
+//img.src = "../Image/Map.jpg";
+//img.onload = function() {
+//context.drawImage(img, 0, 0, 500, 400);
+//}
