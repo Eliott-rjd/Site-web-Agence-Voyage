@@ -21,7 +21,7 @@
                 <a href="Authentification.html" class="active">Connexion</a>
                 </div>
         </nav>
-        <form name="form-valid" action="Panier.html" method = "get">
+        <form name="form-valid" onchange="CalcPrix()" action="Panier.html" method = "get">
             <h3>Mes informations personnelles:</h3>
             <p>Prénom:</p>
             <p id="prénom_recap"></p>
@@ -35,20 +35,13 @@
 
         
             <h3>Les informations du voyage:</h3>
-            
-            <p>Date de départ:</p>
-            <p id="jourd_recap"></p>
-            /
-            <p id="moisd_recap"></p>
-            /
-            <p id="annéed_recap"></p>
 
+            <p>Destination:</p>
+            <p id= "nom_destination_recap" ></p>
+            <p>Date de départ:</p>
+            <p id="dated_recap"></p>
             <p>Date de retour:</p>
-            <p id="jourr_recap"></p>
-            /
-            <p id="moisr_recap"></p>
-            /
-            <p id="annéer_recap"></p>
+            <p id="dater_recap"></p>
             <p>Nombre d'adultes:</p>
             <p id="adultes_recap"></p>
             <p>Nombre d'enfants (-12 ans)*:</p>
@@ -58,13 +51,13 @@
             <p>Numéro de réservation:</p>
             <p id="num_réservation"></p>
             <p>Prix total:</p>
-            <p id= "résultat"></p>
+            <p id= "résultat-recap"></p>
 
             <button type="submit">Valider</button>
         </form>
-        <form name="form-modif" action="Réservation.html?id=JS.id" method = "get">
-            <button type="submit">Modifier</button>
-        </form>
+
+        <button onclick="Modif()" id="Btn_modif" title="Modifier les infos">Modifier</button>
+
         <footer>
             <br>
             <p> CGV Mentions Légales </p> 

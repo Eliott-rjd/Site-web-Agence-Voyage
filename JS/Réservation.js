@@ -1,5 +1,13 @@
+//var mybutton;
+
+
+//window.onload = function () {​​​​​
+//    mybutton = document.getElementById('myBtn')
+//    CalcPrix()
+//}
+
 class ListeVoyage {
-    constructor(nom,ville,id,continent,prix,animaux,temperature) {
+    constructor(nom,ville,id,continent,prix,animaux,temperature) {  
         this._nom=nom;
         this._ville=ville; 
         this._id=id;
@@ -25,47 +33,33 @@ var Voyage10=new ListeVoyage('LasVegas','../Image/Amérique/LasVegas.jpeg' ,'10'
 const ListeVoyages = [Voyage1,Voyage2,Voyage3,Voyage4,Voyage5,Voyage6,Voyage7,Voyage8,Voyage9,Voyage10];
 
 
-function CalcPrix(){
 
 
-    let sejour_id = new URLSearchParams(window.location.search).get("id")
-   // document.getElementById("JS.id").innerHTML= sejour_id
+let sejour_id = new URLSearchParams(window.location.search).get("id")
 
-   for(k of ListeVoyages) {
+for(k of ListeVoyages) {
     if(sejour_id == k._id) {
         p_standard_jour = k._prix 
+        nom_voyage = k._nom
+        console.log(nom_voyage)
     }
 }
 
-console.log(p_standard_jour)
 
-    let dated= document.getElementById("dated").value
-    let dater= document.getElementById("dater").value
-    let adultes= parseInt(document.getElementById("adultes").value,10)
-    let enfants= parseInt(document.getElementById("enfants").value,10)
-    let déj= document.getElementById("subscribedéj").checked
-    let Prénom = document.getElementById("prénom")
-    let Nom = document.getElementById("nom")
-    let email = document.getElementById("email")
-    let num_téléphone = (document.getElementById("téléphone"))
-    
+function CalcPrix(){
+ 
+    dated= document.getElementById("dated").value
+    dater= document.getElementById("dater").value
+    adultes= parseInt(document.getElementById("adultes").value,10)
+    enfants= parseInt(document.getElementById("enfants").value,10)
+    déj= document.getElementById("subscribedéj").checked
+    Prénom = document.getElementById("prénom")
+    Nom = document.getElementById("nom")
+    email = document.getElementById("email")
+    num_téléphone = (document.getElementById("téléphone"))
+    num_réservation = Math.floor(Math.random()*100000)
 
-  //  document.getElementById("prénom_recap").innerHTML= Prénom
-  // document.getElementById("nom_recap").innerHTML= Nom
- //  document.getElementById("email_recap").innerHTML= email
-  //  document.getElementById("téléphone_recap").innerHTML= num_téléphone
-  //  document.getElementById("adultes_recap").innerHTML= adultes
-   // document.getElementById("enfants_recap").innerHTML= enfants
-  //  document.getElementById("jourd_recap").innerHTML= jourd
-   // document.getElementById("jourr_recap").innerHTML= jourr
-  //  document.getElementById("moisd_recap").innerHTML= moisd
-  //  document.getElementById("moisr_recap").innerHTML= moisr
-  //  document.getElementById("annéed_recap").innerHTML= annéed
-  //  document.getElementById("annéer_recap").innerHTML= annéer
-    
-    var num_réservation = Math.floor(Math.random()*100000)
-    
-   // document.getElementById("num_réservation").innerHTML= num_réservation
+    document.getElementById("nom_destination").innerHTML= nom_voyage
     
     var date_d = new Date(dated)
     var date_r = new Date(dater)
@@ -95,10 +89,8 @@ console.log(p_standard_jour)
             if (déj == true) {
                 p_déj = 12
                 p_déj_tot = p_déj*(adultes+enfants)*Diff_jours
-               // document.getElementById("subscribedéj_recap").innerHTML= "Voyage avec petits déjeuners"
             } else {
                 p_déj_tot = 0
-              //  document.getElementById("subscribedéj_recap").innerHTML= "Voyage sans petit déjeuner"
             } 
             document.getElementById("résultat").innerHTML= ((prix_tot = (p_adultes_tot + p_enfants_tot + p_déj_tot) + 0.3*(p_adultes_tot + p_enfants_tot)*Diff_jours) + "€");      // Le prix par jours est calculé en fonction des dépenses sur place, soit 30% du prix du voyage par personne.          
         } else {
@@ -108,7 +100,26 @@ console.log(p_standard_jour)
     } else { document.getElementById("résultat").innerHTML= (prix_tot = 0);
 }
 
-return prix_tot
-    
-    }
+return prix_tot    
+
+//  document.getElementById("nom_destination_recap").innerHTML= nom_voyage
+    document.getElementById("prénom_recap").innerHTML= Prénom
+    document.getElementById("nom_recap").innerHTML= Nom
+    document.getElementById("email_recap").innerHTML= email
+    document.getElementById("téléphone_recap").innerHTML= num_téléphone
+    document.getElementById("adultes_recap").innerHTML= adultes
+    document.getElementById("enfants_recap").innerHTML= enfants
+    document.getElementById("dated_recap").innerHTML= dated
+    document.getElementById("dater_recap").innerHTML= dater
+  //  document.getElementById("résultat_recap").innerHTML= prix_tot
+    document.getElementById("num_réservation").innerHTML= num_réservation
+  //  document.getElementById("subscribedéj_recap").innerHTML= "Voyage avec petits déjeuners"
+  //  document.getElementById("subscribedéj_recap").innerHTML= "Voyage sans petit déjeuner"
+
+}
+
+
+function Modif(){
+    window.history.back()
+}
 
